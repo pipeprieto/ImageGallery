@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Imagegallery/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://i.icomoon.io/public/temp/75331f6161/UntitledProject/style.css"
+    />
+  </head>
+  <body>
+    <div
+      class="container rounded-md w-3/4 my-6 mx-auto flex shadow-md bg-white"
+    >
+      <div class="mx-5 my-auto">
+        <img
+          src="https://avatars.githubusercontent.com/u/55964899?v=4"
+          alt="Andres Prieto"
+          class="rounded-full h-20 w-28"
+          id="profile-image"
+        />
+      </div>
+      <div class="px-8">
+        <p class="font-bold text-xl">Image Gallery by Andrés Prieto</p>
+        <p class="text-justify">
+          This is an image gallery created with tailwind css and vainilla
+          javascript. If you want to get the source code of this project to use
+          it in your own project press click on the button below. I hope you
+          enjoy!
+        </p>
+        <div
+          class="bg-cyan-400 w-1/4 mx-auto my-4 rounded-full hover:bg-cyan-500 text-center"
+        >
+          <a
+            href="https://github.com/pipeprieto/ImageGallery.git"
+            class="text-white"
+            target="blank"
+            ><span class="icon-github text-white"></span> Git-hub</a
+          >
+        </div>
+      </div>
+    </div>
+    <section>
+      <form
+        action="#"
+        method="post"
+        class="w-4/5 m-auto justify-center text-center bg-white"
+      >
+        <p class="font-bold text-xl">
+          Fill the next form and upload your image
+        </p>
+        <input
+          type="text"
+          placeholder="Image tittle"
+          name="tittle"
+          class="my-10 mx-3 form-control"
+        />
+        <input
+          type="url"
+          name="url"
+          placeholder="Enter the image's url"
+          class="my-10 mx-3 w-48 form-control"
+          id="inputurl"
+        />
+        <input
+          type="text"
+          name="description"
+          id="description"
+          maxlength="200"
+          placeholder="Make a description"
+          class="my-10 mx-3 form-control"
+        />
+        <p class="block">Or instead of an url you can upload the image</p>
+        <input
+          type="file"
+          name="imagen"
+          class="block h-10 my-5 mx-auto file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-400 file:text-white hover:file:bg-cyan-500 form-control"
+          accept="image/*,.jpg,jpeg,png"
+          id="inputimg"
+        />
+      </form>
+      <div class="w-1/4 mx-auto text-center hidden" id="msg-1">
+        <p class="text-red-600 text-sm">Debe llenar el formulario</p>
+      </div>
+      <div class="w-1/4 mx-auto text-center hidden" id="msg-1">
+        <p class="text-red-600 text-sm">
+          No está llenando los campos de URL o Imagen
+        </p>
+      </div>
+      <div class="w-3/4 mx-auto text-center">
+        <button
+          class="bg-cyan-400 hover:bg-cyan-500 text-white rounded-full w-20 my-2"
+          id="addbtn"
+        >
+          Add
+        </button>
+      </div>
+    </section>
+
+    <div
+      class="grid min-h-fit bg-white w-5/6 mx-auto mt-5 grid-cols-3"
+      id="grid-container"
+    ></div>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <script src="script.js"></script>
+  </body>
+</html>
