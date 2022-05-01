@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "low-opacity-black": "background-color: rgb(0 0 0 50%)",
+        "low-opacity-black": "background-color: rgba(0,0,0,0.7)",
       },
     },
   },
